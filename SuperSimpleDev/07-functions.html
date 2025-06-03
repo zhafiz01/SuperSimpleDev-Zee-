@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+ 
+    <script>
+
+        // function helloAdd () {
+        //     console.log('hello')
+        //     console.log(2+2)
+        // }
+
+        // helloAdd()
+
+        // function calculateTax (cost, taxPercent) {
+        //     console.log(cost * taxPercent)
+        // }
+        
+        // calculateTax(2000, 3900)
+
+        // function greet (name = 'there') {
+        //     console.log(`Hello ${name}`)
+        // }
+
+        // greet()
+
+        function convertToFarenheit(celsius) {
+            return (celsius * 9 / 5) + 32
+        }
+
+
+        function convertToCelsius(farenheit) {
+            return (farenheit - 32) * 5 / 9
+        }
+
+
+
+        function convertTemp(degrees,unit) {
+            if (unit === 'C') {
+                const result = convertToFarenheit(degrees);
+                return `${result}F`;
+            } else if (unit === 'F') {
+                const result = convertToCelsius(degrees);
+                return `${result}C`;
+            }
+        }
+
+        console.log(convertTemp(25,'C'))
+
+        const convertLength = (length, from, to) => {
+            if (from === 'km' && to === 'miles') {
+                return `${length / 1.6} miles`;
+            } else if (from === 'miles' && to === 'km') {
+                return `${length * 1.6} km`;
+            }
+        }
+        
+        console.log(convertLength(32, 'km', 'miles'));
+        console.log(convertLength(32, 'miles', 'km'));
+
+    </script>
+
+    
+</body>
+</html>

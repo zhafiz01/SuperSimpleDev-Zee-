@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+
+    <button>hello</button>
+    <button class="js-button">Second button</button>
+
+    <button class="button">9a</button>
+    <button class="button-9b">9b</button>
+
+    <button onclick="
+        document.querySelector('.js-choice')
+        .innerHTML = 'You chose: heads'
+    ">heads</button>
+    <button onclick="
+        document.querySelector('.js-choice')
+        .innerHTML = 'You chose: tails'
+    ">tails</button>
+
+    <p class="js-choice"></p>
+
+    <input placeholder="Name" class="js-name-input">
+    
+    <button onclick="
+        const input = document.querySelector('.js-name-input')
+        document.querySelector('.js-message')
+            .innerHTML = `Your name is: ${input.value}`;
+    ">Submit</button>
+
+    <p class="js-message"></p>
+
+
+
+
+ 
+    <script>
+
+        console.log(document.querySelector('button').innerHTML)
+
+        document.querySelector('button')
+            .innerHTML = 'changed'
+
+        const buttonElement = document.querySelector('.js-button');
+
+        console.log(buttonElement)
+
+    //     console.log(document.title)
+    //     document.title = 'Changed'
+
+    //     console.log(document.body)
+    //     console.log(typeof document.body)
+
+    //    console.log(document.body.innerHTML)
+    //    document.body.innerHTML = '<button>Good job!</button>'
+
+    //     // document.body.innerHTML = 'hello'
+    //     document.title = 'Good job'
+
+    // console.log(document.title) 
+
+    console.log(document.querySelector('.button'))
+
+    document.querySelector('.button-9b')
+        .innerHTML = '9b done!';
+
+    const createPerosn = (name) => {
+        return {
+            talk: () => `I am ${name}`
+        }
+    }
+
+    const me = createPerosn('Zee')
+    const you = createPerosn('Bob')
+
+    console.log(me.talk())
+    alert(you.talk())
+
+
+
+    
+
+    </script>
+
+    
+</body>
+</html> 

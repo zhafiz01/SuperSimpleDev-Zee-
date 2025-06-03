@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+ 
+    <script>
+
+        // const product = {
+        //     name: 'socks',
+        //     price: 1090,
+        //     size: 'Large'
+        // };
+
+        // console.log(product)
+        // console.log(product.name, product.size)
+
+        // product.name = 'Cotton socks'
+        // product.color = 'Black'
+        // console.log(product)
+
+        // delete product.name
+        // console.log(product)
+
+      //   const product2 = {
+      //   name: 'shirt',
+      //   'delivery-time': '1 day',
+      //   rating: {
+      //     stars: 4.5,
+      //     count: 87
+      //   },
+      //   fun: function function1() {
+      //     console.log('function inside object');
+      //   }
+      // };
+
+
+    //   console.log(product2);
+    //   console.log(product2.name);
+    //   console.log(product2['name']);
+    //   console.log(product2['delivery-time']);
+    //   console.log(product2['rating'])
+      
+    //   console.log(product2.rating.count);
+    //   product2.fun();
+
+      // console.log(JSON.stringify(product2))
+
+      // const jsonString = JSON.stringify(product2)
+      // console.log(JSON.parse(jsonString))
+
+      // const superHero = {
+      //   name: 'Batmam',
+      //   age: 30,
+      //   universe: 'DC',
+      //   superPowers: 'Billionaire'
+      // }
+
+      // console.log(JSON.stringify(superHero))
+
+      // const jsonString1 = JSON.stringify(superHero)
+      // console.log(JSON.parse(jsonString1))
+
+      console.log('hello'.length)
+      console.log('hello'.toUpperCase())
+
+      const object1 = {
+        messag: 'hello' + 'bye'.toUpperCase()
+      }
+
+      const object2 = object1
+
+      object1.message = 'Billy'
+      console.log(object1)
+
+      const object3 = {
+        message: 'Good Job!'
+      }
+
+
+      const object4 = {
+        message: 'Good Job!',
+        price: 7.99
+      }
+
+      // const message = object4.message
+      const { message, price } = object4
+      console.log(message)
+      console.log(price)
+
+      const object5 = {
+        message,
+        method() {
+        console.log('method')
+      }
+      };
+
+      console.log(object5)
+      object5.method()
+
+      // const comparePrice = (product1, product2) => {
+      //   if (product1.price < product2.price) {
+      //     return product1;
+      //   } else {
+      //     return product2
+      //   }
+      // }
+
+      // const product1 = {
+      //   name: 'basketball',
+      //   price: 20.95
+      // };
+
+      // const product1a = {
+      //   name: 'socks',
+      //   price: 7.00
+      // }
+
+      // console.log(name)
+
+      // console.log(comparePrice('basketball', 'socks'))
+
+      const isSameProduct = (product1, product2) => {
+        if (
+          product1.name === product2.name && product1.price === product2.price
+        ) {
+          return true
+        } else {
+          return false
+        }
+      }
+
+      const product1 = {
+        name: 'basketball',
+        price: 2095
+      };
+
+      const product2 = {
+        name: 'socks',
+        price: 1090
+      };
+
+      const product3 = {
+        name: 'basketball',
+        price: 2095
+      };
+
+      console.log(isSameProduct(product1, product3))
+
+      const name = "Zeeshan"
+
+      console.log(name.toLowerCase())
+
+      const score = {
+        wins: 0,
+        losses: 0
+      }
+
+      const playGame = (guess) => {
+        const randomNumber = Math.random()
+        const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+        console.log(guess === result ? 'You win!' : 'You lose!')
+
+        if (guess === result) {
+        score.wins++
+      } else {
+        score.losses++
+      }
+
+      console.log(score)
+      }
+
+
+      
+
+
+
+
+
+
+    </script>
+
+    <button onclick="
+    playGame('heads')">heads</button>
+    
+    <button onclick="
+    playGame('tails')">tails</button>
+
+
+    
+</body>
+</html> 
